@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+ 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.wall {
+    background-color: blue;
+    border: 2px solid blueviolet;
+}
+ 
+.dot {
+    background-color: black;
+    position: relative;
+}
+ 
+.dot::after {
+    content: " ";
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+ 
+.pacman {
+    background-image: url('img\pacman1.png');  /* Asegúrate de usar la ruta correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;  /* Ajusta el tamaño de la celda para que coincida con las celdas de la cuadrícula */
+    height: 30px; /* Ajusta el tamaño */
+    position: relative;
+    z-index: 10;
+    border-radius: 50%;  /* Asegura que tenga forma circular */
+}
+
+
+
+.ghost { 
+    border-radius: 50%;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.red {
+    background-color: red;
+    background-image: url('img/red.png'); /* Asegúrate de que la ruta sea correcta */
+}
+
+.pink {
+    background-color: pink;
+}
