@@ -1,66 +1,75 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
- 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
-    gap: 2px;
-    justify-content: center;
-    margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
 
-.wall {
-    background-color: blue;
-    border: 2px solid blueviolet;
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  justify-content: center;
+  margin: 0 auto;
 }
- 
-.dot {
-    background-color: black;
-    position: relative;
+.wall{
+  background-color: blue;
+  border: 2px solid #001a66;
 }
- 
-.dot::after {
-    content: " ";
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
+.dot{
+  background-color: black;
+  position: relative;
 }
- 
+.dot::after{
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 40% ;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+
 .pacman {
-    background-image: url('img\pacman1.png');  /* Asegúrate de usar la ruta correcta */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 30px;  /* Ajusta el tamaño de la celda para que coincida con las celdas de la cuadrícula */
-    height: 30px; /* Ajusta el tamaño */
-    position: relative;
-    z-index: 10;
-    border-radius: 50%;  /* Asegura que tenga forma circular */
+  background-image: url('img/pacman.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+  transform-origin: center;
 }
 
 
-
-.ghost { 
-    border-radius: 50%;
-    position: relative;
-    width: 30px;
-    height: 30px;
+.ghost {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.red {
-    background-color: red;
-    background-image: url('img/red.png'); /* Asegúrate de que la ruta sea correcta */
+.red{
+  background-image: url('img/GhostRed.png');
 }
-
 .pink {
-    background-color: pink;
+  background-image: url('img/GhostPink.png');
+} 
+
+.author {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 19px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border: 3px solid #ffff00;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 15px #ffff00;
+  margin-top: 20px;
 }
